@@ -25,6 +25,7 @@
 
 #define VTUNER_PIDLIST_LEN 30 // from usbtunerhelper
 
+#include <linux/ioctl.h>
 #include <linux/dvb/version.h>
 #include <linux/dvb/frontend.h>
 #include <linux/dvb/dmx.h>
@@ -150,7 +151,7 @@ struct vtuner_message
 #endif
 
 
-#if VMSG_TYPE2
+#if ((VMSG_TYPE2) || (_IOC_NONE == 0)) && (!VMSG_TYPE1)
 #define VTUNER_GET_MESSAGE  11
 #define VTUNER_SET_RESPONSE 12
 #define VTUNER_SET_NAME     13
