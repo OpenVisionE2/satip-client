@@ -34,22 +34,22 @@ AC_CHECK_FUNCS([clock_gettime memset setenv socket strchr strdup strerror strstr
 AC_CONFIG_FILES([Makefile])
 
 AC_ARG_WITH(boxtype,
-	[  --with-boxtype=NAME box type [[none,dm7025,dm800...]]],
+	[  --with-boxtype=NAME box type [[none,dm800...]]],
 	[BOXTYPE="$withval"],[BOXTYPE="dm800"])
 AC_SUBST(BOXTYPE)
 AC_DEFINE_UNQUOTED(BOXTYPE,"$BOXTYPE",[box type])
 
-AC_ARG_WITH(machinebuild,
-	[  --with-machinebuild=NAME machine build [[none,atemeo5200,atemeo6000...]]],
-	[MACHINEBUILD="$withval"],[MACHINEBUILD="atemeo5200"])
-AC_SUBST(MACHINEBUILD)
-AC_DEFINE_UNQUOTED(MACHINEBUILD,"$MACHINEBUILD",[machine build])
+AC_ARG_WITH(boxbrand,
+	[  --with-boxbrand=NAME box brand [[none,dreambox...]]],
+	[BOXBRAND="$withval"],[BOXBRAND="dreambox"])
+AC_SUBST(BOXBRAND)
+AC_DEFINE_UNQUOTED(BOXBRAND,"$BOXBRAND",[box brand])
 
 #if test "$BOXTYPE" == "odinm7" -o "$BOXTYPE" == "e3hd"; then
 #	AC_DEFINE(HAVE_NO_MSG16, 1,[define then VTUNER use old MSG 1 Mode])
 #fi
 
-if test "$BOXTYPE" == "vusolo4k" -o "$BOXTYPE" == "vuuno4k" -o "$BOXTYPE" == "vuuno4kse" -o "$BOXTYPE" == "vuultimo4k" -o "$BOXTYPE" == "vuzero4k" -o "$BOXTYPE" == "hd51" -o "$BOXTYPE" == "vs1500" -o "$BOXTYPE" == "sf4008" -o "$BOXTYPE" == "gb7252" -o "$BOXTYPE" == "dags7252" -o "$BOXTYPE" == "xc7439" -o "$BOXTYPE" == "h7" -o "$BOXTYPE" == "8100s" -o "$BOXTYPE" == "osmio4k" -o "$BOXTYPE" == "osmio4kplus" -o "$BOXTYPE" == "cc1" -o "$BOXTYPE" == "sf8008" -o "$BOXTYPE" == "ustym4kpro" -o "$BOXTYPE" == "gbmv200" -o "$BOXTYPE" == "beyonwizv2" -o "$BOXTYPE" == "h9" -o "$BOXTYPE" == "h9combo" -o "$BOXTYPE" == "h10" -o "$BOXTYPE" == "i55plus" -o "$BOXTYPE" == "hd60" -o "$BOXTYPE" == "hd61" -o "$BOXTYPE" == "multibox" -o "$BOXTYPE" == "v8plus" -o "$BOXTYPE" == "viper4k" -o "$BOXTYPE" == "u5" -o "$BOXTYPE" == "u5pvr" -o "$BOXTYPE" == "u51" -o "$BOXTYPE" == "u52" -o "$BOXTYPE" == "u53" -o "$BOXTYPE" == "u532" -o "$BOXTYPE" == "u533" -o "$BOXTYPE" == "u54" -o "$BOXTYPE" == "u55" -o "$BOXTYPE" == "u41" -o "$BOXTYPE" == "u42" -o "$BOXTYPE" == "u43"; then
+if test "$BOXTYPE" == "vusolo4k" -o "$BOXTYPE" == "vuuno4k" -o "$BOXTYPE" == "vuuno4kse" -o "$BOXTYPE" == "vuultimo4k" -o "$BOXTYPE" == "vuzero4k" -o "$BOXTYPE" == "hd51" -o "$BOXTYPE" == "vs1500" -o "$BOXTYPE" == "sf4008" -o "$BOXTYPE" == "gbquad4k" -o "$BOXTYPE" == "gbue4k" -o "$BOXTYPE" == "force3uhdplus" -o "$BOXTYPE" == "force3uhd" -o "$BOXTYPE" == "revo4k" -o "$BOXTYPE" == "tmtwin4k" -o "$BOXTYPE" == "galaxy4k" -o "$BOXTYPE" == "tm4ksuper" -o "$BOXTYPE" == "lunix3-4k" -o "$BOXTYPE" == "spycat4kmini" -o "$BOXTYPE" == "spycat4k" -o "$BOXTYPE" == "spycat4kcombo" -o "$BOXTYPE" == "h7" -o "$BOXTYPE" == "e4hdultra" -o "$BOXTYPE" == "protek4k" -o "$BOXTYPE" == "osmio4k" -o "$BOXTYPE" == "osmio4kplus" -o "$BOXTYPE" == "cc1" -o "$BOXTYPE" == "sf8008" -o "$BOXTYPE" == "ustym4kpro" -o "$BOXTYPE" == "gbtrio4k" -o "$BOXTYPE" == "gbip4k" -o "$BOXTYPE" == "beyonwizv2" -o "$BOXTYPE" == "h9" -o "$BOXTYPE" == "h9combo" -o "$BOXTYPE" == "h10" -o "$BOXTYPE" == "i55plus" -o "$BOXTYPE" == "hd60" -o "$BOXTYPE" == "hd61" -o "$BOXTYPE" == "multibox" -o "$BOXTYPE" == "v8plus" -o "$BOXTYPE" == "viper4k" -o "$BOXBRAND" == "dinobot"; then
 	AC_DEFINE(VMSG_TYPE2, 1,[define vtuner_message type 2 see vtuner.h])
 fi
 
