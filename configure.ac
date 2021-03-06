@@ -59,7 +59,7 @@ if test "$STBPLATFORM" == "vu4kgen" -o "$STBPLATFORM" == "hdboxhisi3716mv300" -o
 	AC_DEFINE(VMSG_TYPE2, 1,[define vtuner_message type 2 see vtuner.h])
 fi
 
-if test "$STBPLATFORM" == "vu1gen" -o "$STBPLATFORM" == "vu2gen"; then
+if test "$STBPLATFORM" == "vu1gen" -o "$STBPLATFORM" == "vu2gen" -o "$BOXBRAND" == "rpi"; then
 	AC_DEFINE(VMSG_TYPE1, 1,[define vtuner_message type 1 see vtuner.h])
 fi
 
