@@ -55,10 +55,6 @@ AC_DEFINE_UNQUOTED(STBPLATFORM,"$STBPLATFORM",[stb platform])
 #	AC_DEFINE(HAVE_NO_MSG16, 1,[define then VTUNER use old MSG 1 Mode])
 #fi
 
-if test "$STBPLATFORM" == "vu4kgen" -o "$STBPLATFORM" == "hdboxhisi3716mv300" -o "$STBPLATFORM" == "gfuturesbcmarm" -o "$BOXTYPE" == "sf4008" -o "$STBPLATFORM" == "gb7252" -o "$STBPLATFORM" == "dags7252" -o "$STBPLATFORM" == "4kspycat" -o "$BOXTYPE" == "h7" -o "$STBPLATFORM" == "8100s" -o "$STBPLATFORM" == "edision4k" -o "$STBPLATFORM" == "octagonhisil" -o "$BOXTYPE" == "ustym4kpro" -o "$STBPLATFORM" == "gbmv200" -o "$BOXTYPE" == "gbx34k" -o "$BOXTYPE" == "beyonwizv2" -o "$STBPLATFORM" == "zgemmahisi3798mv200" -o "$STBPLATFORM" == "zgemmahisi3716mv430" -o "$STBPLATFORM" == "gfutureshisil" -o "$BOXBRAND" == "maxytec" -o "$BOXTYPE" == "viper4k" -o "$BOXBRAND" == "dinobot" -o "$STBPLATFORM" == "dagsmv200"; then
-	AC_DEFINE(VMSG_TYPE2, 1,[define vtuner_message type 2 see vtuner.h])
-fi
-
 if test "$STBPLATFORM" == "vu1gen" -o "$STBPLATFORM" == "vu2gen" -o "$BOXBRAND" == "rpi"; then
 	AC_DEFINE(VMSG_TYPE1, 1,[define vtuner_message type 1 see vtuner.h])
 fi
