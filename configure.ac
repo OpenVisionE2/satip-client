@@ -55,7 +55,7 @@ AC_DEFINE_UNQUOTED(STBPLATFORM,"$STBPLATFORM",[stb platform])
 #	AC_DEFINE(HAVE_NO_MSG16, 1,[define then VTUNER use old MSG 1 Mode])
 #fi
 
-if test "$STBPLATFORM" == "vu1gen" -o "$STBPLATFORM" == "vu2gen" -o "$BOXBRAND" == "rpi"; then
+if test "$STBPLATFORM" == "vu1gen" -o "$STBPLATFORM" == "vu2gen"; then
 	AC_DEFINE(VMSG_TYPE1, 1,[define vtuner_message type 1 see vtuner.h])
 fi
 
