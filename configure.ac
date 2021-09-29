@@ -51,10 +51,6 @@ AC_ARG_WITH(stbplatform,
 AC_SUBST(STBPLATFORM)
 AC_DEFINE_UNQUOTED(STBPLATFORM,"$STBPLATFORM",[stb platform])
 
-#if test "$BOXTYPE" == "odinm7" -o "$BOXTYPE" == "e3hd"; then
-#	AC_DEFINE(HAVE_NO_MSG16, 1,[define then VTUNER use old MSG 1 Mode])
-#fi
-
 if test "$STBPLATFORM" == "vu1gen" -o "$STBPLATFORM" == "vu2gen"; then
 	AC_DEFINE(VMSG_TYPE1, 1,[define vtuner_message type 1 see vtuner.h])
 fi
